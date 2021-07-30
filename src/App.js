@@ -50,11 +50,24 @@ const getLocalTodos = () => {
   }
 };
 
+// dark mode and light mode code here
+const checkbox = () => {
+  document.getElementById('checkbox');
+  checkbox.addEventListener('change', () => 
+    {
+      // change the theme of the website
+      document.body.classList.toggle('dark');
+
+    }
+);
+};
+
   return (
     <div className="App">
       <header>
      <h1>Dylan's Todo List</h1>
      </header>
+
      <Form 
       inputText={inputText} 
       todos={todos} 
@@ -67,7 +80,12 @@ const getLocalTodos = () => {
      todos={todos} 
      />
     </div>
+
   );
+
+
 }
+
+
 
 export default App;
